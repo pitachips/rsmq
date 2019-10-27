@@ -1,5 +1,5 @@
 const RedisSMQ = require("../index");
-const rsmq = new RedisSMQ( {host: "127.0.0.1", port: 6379, ns: "rsmq"} );
+const rsmq = new RedisSMQ({ host: "127.0.0.1", port: 6379, ns: "rsmq" });
 
 /*
 ======================================
@@ -72,5 +72,5 @@ function receiveMessageLoop(queuename) {
 				console.log("no available message in queue..");
 			}
 		});
-	}, 500);
+	}, 2500);
 }
